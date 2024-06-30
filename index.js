@@ -6,6 +6,7 @@ const express = require("express");
 const cron = require('node-cron');
 const path = require("node:path");
 const { autoCallStars } = require("./utils/auto-call-stars.js");
+const { autoImportSMStars } = require("./utils/auto-importsm-stars.js");
 const { connectToMongoDB } = require("./utils/db.js");
 const pino = require("pino");
 
@@ -56,10 +57,18 @@ client.once("ready", () => {
   logger.info("Bot is online");
 
   autoCallStars(client);
+  // Every 1 minute
   cron.schedule('*/1 * * * *', () => {
     logger.info('Running /call after 1 minute');
     autoCallStars(client);
   });
+
+  // Every 5 minutes
+  cron.schedule('*/5 * * * *', () => {
+    logger.info('Running import-sm stars');
+    autoImportSMStars();
+  });
+
 });
 
 (async () => {

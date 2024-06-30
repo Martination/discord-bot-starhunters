@@ -9,14 +9,17 @@
   },
   {
     "name": "Emir's Arena (pvp / mta / apa / duel)",
+    "fuzzyaliases": ["Pvp Arena", "Al Kharid Arena", "Duel Arena"],
     "value": "Emir's Arena (pvp / mta / apa / duel)"
   },
   {
     "name": "East Lumbridge Swamp Mine (lse)",
+    "fuzzyaliases": ["Lumby East Swamp"],
     "value": "East Lumbridge Swamp Mine (lse)"
   },
   {
     "name": "West Lumbridge Swamp Mine (lsw)",
+    "fuzzyaliases": ["Lumby West Swamp"],
     "value": "West Lumbridge Swamp Mine (lsw)"
   },
   {
@@ -33,14 +36,17 @@
   },
   {
     "name": "South-West Varrock Mine / Champion's Guild (vsw)",
+    "fuzzyaliases": ["South-West Varrock Mine","Champion's Guild"],
     "value": "South-West Varrock Mine / Champion's Guild (vsw)"
   },
   {
     "name": "Dwarven Mine Northern Entrance (ice)",
+    "fuzzyaliases": ["Ice mountain", "Dwarf Mine"],
     "value": "Dwarven Mine Northern Entrance (ice)"
   },
   {
     "name": "Mining Guild Entrance (fally / fb)",
+    "fuzzyaliases": ["Falador East Bank"],
     "value": "Mining Guild Entrance (fally / fb)"
   },
   {
