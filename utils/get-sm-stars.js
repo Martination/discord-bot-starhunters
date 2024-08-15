@@ -81,7 +81,18 @@ async function HttpRequesStarMinersFetchDataAsync() {
             const calledAtDate = new Date(star.calledAt * 1000); // Unix Timestamp to JS Date
 
 
-            result.push(new Star(world, tier, location, "Starminers - " + foundBy, calledAtDate));
+            result.push(
+                new Star(
+                    world,
+                    tier,
+                    location,
+                    "Starminers - " + foundBy, // foundBy
+                    calledAtDate, // foundAt
+                    new Date(), // updatedAt
+                    calledAtDate // calledAt
+                    // credit - unused? foundAt seems to be used everywhere.
+                )
+            );
         }
     }
 

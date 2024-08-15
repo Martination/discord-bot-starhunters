@@ -57,14 +57,14 @@ client.once("ready", () => {
   logger.info("Bot is online");
 
   autoCallStars(client);
-  // Every 1 minute
-  cron.schedule('*/1 * * * *', () => {
-    logger.info('Running /call after 1 minute');
+  // Every 5 minutes
+  cron.schedule('*/5 * * * *', () => {
+    logger.info('Running /call after 5 minutes');
     autoCallStars(client);
   });
 
-  // Every 5 minutes
-  cron.schedule('*/5 * * * *', () => {
+  // Every 30 minutes
+  cron.schedule('*/30 * * * *', () => {
     logger.info('Running import-sm stars');
     autoImportSMStars();
   });
