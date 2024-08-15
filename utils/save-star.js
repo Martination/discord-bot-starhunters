@@ -15,8 +15,8 @@ saveStar = async (starToSave, interaction) => {
 
   const starExists = await getStarInWorld(starToSave.world);
 
-  // if the star already exists and is the same location
-  if (starExists && starExists.location === starToSave.location) {
+  // if the star already exists
+  if (starExists) {
     // save without changing foundAt
     delete starToSave.foundAt;
   }
